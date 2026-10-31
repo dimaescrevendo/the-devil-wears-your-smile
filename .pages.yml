@@ -1,0 +1,48 @@
+media:
+  input: assets
+  output: assets
+content:
+  - name: chapters
+    label: Capítulos
+    type: collection
+    path: chapters
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    view:
+      primary: title
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: published
+        label: Publicar e desbloquear capítulo
+        type: boolean
+      - name: body
+        label: Texto completo
+        type: text
+        description: Cole o capítulo aqui e marque Publicar somente quando estiver pronto.
+  - name: fotos
+    label: Fotos do site
+    type: file
+    path: site.json
+    format: json
+    fields:
+      - name: fotoInicial
+        label: Foto da página inicial
+        type: image
+      - name: fotoLorena
+        label: Foto da Lorena
+        type: image
+      - name: fotoFlora
+        label: Foto da Flora
+        type: image
+      - name: fotoCelina
+        label: Foto da Celina
+        type: image
+      - name: fotoEduarda
+        label: Foto da Juquinha
+        type: image
